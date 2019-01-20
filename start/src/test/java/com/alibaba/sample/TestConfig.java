@@ -6,13 +6,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * TestConfig,  {@link com.alibaba.demo.config.ColaConfig}
  *
  * @author Frank Zhang
  * @date 2018-08-08 12:33 PM
  */
 @Configuration
-@ComponentScan(basePackages = {"com.alibaba.cola", "com.alibaba.demo"})
+@ComponentScan(basePackages = {"com.alibaba.sample.*","com.alibaba.cola"})
 public class TestConfig {
 
     public TestConfig() {
