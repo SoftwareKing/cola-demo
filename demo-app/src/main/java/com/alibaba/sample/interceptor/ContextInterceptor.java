@@ -4,6 +4,7 @@ import com.alibaba.cola.command.CommandInterceptorI;
 import com.alibaba.cola.command.PreInterceptor;
 import com.alibaba.cola.context.Context;
 import com.alibaba.cola.dto.Command;
+import com.alibaba.sample.common.BizCode;
 import com.alibaba.sample.context.DemoContent;
 
 @PreInterceptor
@@ -19,7 +20,7 @@ public class ContextInterceptor implements CommandInterceptorI{
         if(command.getContext() != null){
             context.setBizCode(command.getContext().getBizCode());
         }
-
+        context.setBizCode(BizCode.BIZ_ONE);
         command.setContext(context);
 
     }
